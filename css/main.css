@@ -1,0 +1,115 @@
+:root {
+  --cyan-color: hsl(179, 62%, 43%);
+  --bright-blue-color: hsl(71, 73%, 54%);
+  --light-gray-color: hsl(204, 43%, 93%);
+  --grayish-blue-color: hsl(218, 22%, 67%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  background-color: var(--light-gray-color);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+.price-component {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 42rem;
+  overflow: hidden;
+}
+.price-component .community {
+  padding: 40px;
+}
+.price-component .community h1 {
+  margin: 0;
+  color: var(--cyan-color);
+  font-size: 1.6rem;
+}
+.price-component .community h2 {
+  font-size: 1.2rem;
+  color: var(--bright-blue-color);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.price-component .community p {
+  margin: 15px 0;
+  color: var(--grayish-blue-color);
+  line-height: 1.6;
+}
+.price-component .bottom {
+  display: flex ;
+}
+
+.price-component .subscription {
+  flex-basis: 50%;
+  background-color: var(--cyan-color);
+  padding: 40px;
+}
+.price-component .subscription h2 {
+  margin: 0 0 15px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.price-component .subscription span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+.price-component .subscription span::after {
+  content: "per month";
+  position: absolute;
+  right: -90px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: hsl(204deg 43% 93% / 65%);
+}
+.price-component .subscription p {
+  margin: 10px 0 20px;
+  color: var(--light-gray-color);
+}
+.price-component .subscription a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--bright-blue-color);
+  padding: 15px 15px;
+  border-radius: 6px;
+  color: white;
+}
+.price-component .text {
+  flex-basis: 50%;
+  background-color: hsl(179deg 62% 43% / 70%);
+  padding: 40px;
+}
+.price-component .text h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.price-component .text p {
+  margin: 15px 0 0;
+  color: var(--light-gray-color);
+  line-height: 1.5;
+  padding-right: 65px;
+  font-size: .9rem;
+}
+@media (max-width: 767px) {
+  .price-component .bottom {
+    flex-direction: column;
+  }
+}
